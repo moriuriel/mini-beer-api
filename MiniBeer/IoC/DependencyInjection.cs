@@ -7,7 +7,7 @@ namespace MiniBeer.Api.IoC
 	{
 		public static IServiceCollection AddUseCases(this IServiceCollection services)
 		{
-			services.AddScoped<CreateBeerUseCase>();
+			services.AddScoped<ICreateBeerUseCase,CreateBeerUseCase>();
 			return services;
 		}
 

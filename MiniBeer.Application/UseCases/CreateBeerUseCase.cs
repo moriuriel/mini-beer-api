@@ -4,7 +4,12 @@ using MiniBeer.Application.Validators;
 
 namespace MiniBeer.Application.UseCases
 {
-    public class CreateBeerUseCase
+    public interface ICreateBeerUseCase
+    {
+        CreateBeerOutput CreateBeerAsync(CreateBeerInput input);
+    }
+
+    public class CreateBeerUseCase: ICreateBeerUseCase 
     {
         private readonly CreateBeerValidator _createBeerValidator;
 
